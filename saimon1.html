@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Simon Game</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <h1>Simon Game</h1>
+        
+        <div class="score-container">
+            <div class="score-item">
+                <i class="fas fa-trophy"></i>
+                <span>High Score: <span id="highScore">0</span></span>
+            </div>
+            <div class="score-item">
+                <i class="fas fa-star"></i>
+                <span>Level: <span id="currentLevel">0</span></span>
+            </div>
+        </div>
+        
+        <h2 id="label">Press Start to begin</h2>
+
+        <div id="Container">
+            <div class="btn red" id="red"></div>
+            <div class="btn yellow" id="yellow"></div>
+            <div class="btn green" id="green"></div>
+            <div class="btn purple" id="purple"></div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn-control">
+                <i class="fas fa-play"></i> Start
+            </button>
+            <button id="resetBtn" class="btn-control">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+        </div>
+
+        <div class="instructions">
+            Watch the sequence and repeat it by clicking the buttons in the same order.
+        </div>
+    </div>
+
+    <div id="winningModal" class="winning-modal">
+        <div class="modal-content">
+            <div class="trophy"><i class="fas fa-trophy"></i></div>
+            <h2>New High Score!</h2>
+            <p>Congratulations! You've beaten your previous record.</p>
+            <p>Your new high score: <span id="newHighScore">0</span></p>
+            <div class="controls">
+                <button id="continueBtn" class="btn-control">
+                    <i class="fas fa-play"></i> Continue
+                </button>
+                <button id="closeModalBtn" class="btn-control">
+                    <i class="fas fa-times"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
